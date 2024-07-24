@@ -1,3 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.home {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.889) 0%,
+      rgba(0, 0, 0, 0.668) 100%
+    ),
+    url("./assets/ai-generated-8524058.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.menu {
+  background: rgba(31, 31, 31, 0.74);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.418);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.navigation{
+  background: rgba(31, 31, 31, 0.416);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.201);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.navbar{
+  background: rgba(18, 18, 18, 0.882);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.201);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.navbar input {
+  background: rgba(57, 57, 57, 0.927); /* Semi-transparent white */
+}
+
+.navbar input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Lighter white for placeholder text */
+}
+.loader {
+  width: 45px;
+  aspect-ratio: 0.75;
+  --c: no-repeat linear-gradient(theme(colors.white) 0 0);
+  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+  background-size: 20% 50%;
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
